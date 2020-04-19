@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Olympics</title>
+
+    <!-- Import the Plotly library. Note that this has to 
+         happen before we importa any code that uses Plotly. -->
+    <!-- Import the D3 library. Note that this has to happen 
+    before we import any code that uses D3. -->
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin=""/>     
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- Import the D3 library. Note that this has to happen 
+    before we import any code that uses D3. -->
+    
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="http://code.jquery.com/jquery-git1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <!-- Import some CSS, just to show how it's done. -->
+    
+    <link rel="stylesheet" type="text/css" href="static/css/style.css"></link>
+    </head>
+      <body>
+        
+        <img src="../static/pics/olympic-rings.jpg" class="center"/>
+        <h1 class="ml15">
+          <span class="word">Citius</span>
+          <span class="word">Altius</span>
+          <span class="word">Fortius</span>
+        </h1>
+        <br><br>
+        <!-- Create a hyperlink that calls the '/other' route when clicked. 
+        Go to app.py to see how that '/other' route is defined. -->
+    <a href="/other">Olympics History</a>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h4>Select Olympics Year</h4>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 jumbotron text-center">  
+        <div id="MapYear" style="width: 1000px; height:500px;" class="center"></div>    
+        </div>
+      </div>
+      
+
+    <!--<div id="plot"></div>-->
+    <div id="Medal" style="width: 1000px; height:500px;" class="center"></div>
+    <!--<div class="col-md-10">-->
+      <!--<div id="table-area" class="">-->
+        <table id="events-table" style="width: 600px;" class="center" >
+          <thead>
+            <tr style="background-color: white;">
+              <th class="table-head">Year</th>
+              <th class="table-head">Country</th>
+              <th class="table-head">Event</th>
+              <th class="table-head">Gender</th>
+              <th class="table-head">Medal</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      
+    <!--</div>  -->
+
+    <!--<div id="Events"  class="center"></div>-->
+        
+    <!-- Import the main JavaScript code. -->
+    <script type="text/javascript" src="/static/js/config.js"></script>
+    <script type="text/javascript" src="/static/js/main.js"></script>
+
+</body>
+
+</html>

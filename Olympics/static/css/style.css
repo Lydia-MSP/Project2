@@ -1,0 +1,66 @@
+
+
+h1 { color: black;
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    text-align: center;
+}
+
+h5 { color: blue;    
+    font-size: 20px;
+}
+p{
+    font-family: 'Arial';
+    font-size: 13px;
+
+}
+.ml15 {
+    font-weight: 800;
+    font-size: 3.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+  }
+  
+  .ml15 .word {
+    display: inline-block;
+    line-height: 1em;
+  }
+h3 { color: rgba(15, 93, 167, 0.767); }
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+img{
+    height : 200px;
+}
+
+body{
+    background-color: white;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 50%;
+    
+  }
+  
+  th, td {
+    text-align: center;
+    padding: 25px;
+    
+
+  }
+
+  tr:nth-child(even) {
+    background-color: whitesmoke;
+    
+  } 
+  tr:nth-child(odd) {
+    background-color: lightgray;
+    
+    
+  }     
+

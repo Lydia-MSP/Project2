@@ -1,0 +1,41 @@
+sqlite3 olympics.db
+
+
+CREATE TABLE Host_City(
+  Year INTEGER NOT NULL PRIMARY KEY,
+  City TEXT NOT NULL,
+  Latitude NUMERIC NOT NULL,
+  Longitude NUMERIC NOT NULL,
+  Num_Par_Countries INTEGER NOT NULL
+);
+
+CREATE TABLE Winners(
+	Winner_skey INTEGER NOT NULL PRIMARY KEY,
+	Year INTEGER NOT NULL,
+	City TEXT NOT NULL,
+	Sport TEXT NOT NULL,
+	Discipline TEXT NOT NULL,
+	Athlete TEXT NOT NULL,
+	Country_Cd TEXT NOT NULL,
+	Gender TEXT NOT NULL,
+	Event TEXT NOT NULL,
+	Medal TEXT NOT NULL
+);
+
+CREATE TABLE Country_City(
+	Country_Name TEXT NOT NULL,
+	Country_Cd TEXT NOT NULL PRIMARY KEY,
+	Population INTEGER NOT NULL,
+	GDP NUMERIC NOT NULL
+);
+
+.mode csv
+
+
+.import c:/sqllite/City_Lat_Long.csv Host_City
+
+.import c:/sqllite/summer.csv Winners
+
+.import c:/sqllite/dictionary.csv Country_City
+
+
